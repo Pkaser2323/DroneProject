@@ -1,0 +1,46 @@
+/* 全局樣式 */
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh; /* 讓地圖和圖表高度與視窗一致 */
+    overflow: hidden;
+}
+
+/* 地圖區域 */
+#mapContainer {
+    width: 60%; /* 地圖佔屏幕 60% */
+    height: 100%; /* 滿高 */
+    position: relative;
+    background-color: #ffffff; /* 地圖背景 */
+}
+
+#map {
+    width: 100%;
+    height: 100%; /* 地圖填充容器 */
+}
+
+/* 圖表區域 */
+#chartContainer {
+    width: 40%; /* 圖表佔屏幕 40% */
+    height: 100%; /* 滿高 */
+    display: flex;
+    flex-direction: column; /* 讓圖表垂直排列 */
+    background: #f4f4f4; /* 圖表背景 */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 單個圖表樣式 */
+#chartContainer > div {
+    flex: 1; /* 每個圖表均分容器 */
+    margin-bottom: 10px; /* 圖表之間的間距 */
+    background: #ffffff; /* 圖表背景色 */
+    border: 1px solid #ccc; /* 圖表邊框 */
+    border-radius: 5px; /* 圓角效果 */
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+/* 取消最後一個圖表的下邊距 */
+#chartContainer > div:last-child {
+    margin-bottom: 0;
+}
